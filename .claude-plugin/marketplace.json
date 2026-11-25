@@ -5,5 +5,18 @@
     "name": "Olaf-Koziara",
     "url": "https://github.com/Olaf-Koziara"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "atlassian",
+      "source": "./plugins/atlassian",
+      "description": "Jira and Confluence MCP tools (issues, sprints, boards, pages, search) via mcp-atlassian launched with uvx.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Olaf Koziara",
+        "url": "https://github.com/Olaf-Koziara"
+      },
+      "license": "MIT",
+      "keywords": ["jira", "confluence", "atlassian", "mcp"]
+    }
+  ]
 }
