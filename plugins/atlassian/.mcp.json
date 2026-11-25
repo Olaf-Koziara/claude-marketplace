@@ -2,7 +2,7 @@
   "mcpServers": {
     "atlassian": {
       "command": "uvx",
-      "args": ["mcp-atlassian"],
+      "args": ["--from", "mcp-atlassian==0.24.8", "mcp-atlassian"],
       "env": {
         "JIRA_URL": "${user_config.jira_url}",
         "JIRA_USERNAME": "${user_config.jira_username}",

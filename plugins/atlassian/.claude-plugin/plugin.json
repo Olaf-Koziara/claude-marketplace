@@ -14,7 +14,9 @@
   "network": {
     "hosts": [
       "*.atlassian.net",
-      "*.atlassian.com"
+      "*.atlassian.com",
+      "pypi.org",
+      "files.pythonhosted.org"
     ]
   },
   "userConfig": {
