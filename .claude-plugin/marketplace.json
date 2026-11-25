@@ -1,10 +1,9 @@
 {
-  "name": "claude-marketplace",
-  "description": "Claude Code and OMP plugins marketplace catalog",
+  "name": "olaf-marketplace",
+  "description": "Plugins marketplace catalog for Claude Code and OMP",
   "owner": {
     "name": "Olaf-Koziara",
     "url": "https://github.com/Olaf-Koziara"
   },
-  "plugins": [],
-  "categories": []
+  "plugins": []
 }

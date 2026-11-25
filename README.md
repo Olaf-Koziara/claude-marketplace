@@ -1,4 +1,4 @@
-# Claude Marketplace
+# claude-marketplace
 
 Katalog wtyczek dla Claude Code oraz OMP.
 
@@ -7,23 +7,20 @@ Katalog wtyczek dla Claude Code oraz OMP.
 ```
 .
 ├── .claude-plugin/
-│   └── marketplace.json    # Główny rejestr katalogu
-├── plugins/                # Katalog na przyszłe wtyczki (lub referencje)
-├── marketplace.json        # Korzeń dla wstecznej kompatybilności
+│   └── marketplace.json    # Manifest katalogu marketplace
+├── plugins/                # Katalog na lokalne wtyczki (lub referencje)
 └── README.md
 ```
 
 ## Rejestracja marketplace
 
-### Claude Code / OMP
-
-Aby dodać ten marketplace do swojej konfiguracji:
+### Claude Code
 
 ```bash
 claude plugin marketplace add Olaf-Koziara/claude-marketplace
 ```
 
-lub w OMP:
+### OMP
 
 ```bash
 omp plugin marketplace add Olaf-Koziara/claude-marketplace
@@ -32,12 +29,12 @@ omp plugin marketplace add Olaf-Koziara/claude-marketplace
 Aktualizacja listy wtyczek:
 
 ```bash
-omp plugin marketplace update claude-marketplace
+omp plugin marketplace update olaf-marketplace
 ```
 
 ## Dodawanie wtyczek
 
-Aby dodać wtyczkę do tego marketplace, dodaj wpis do tablicy `plugins` w `.claude-plugin/marketplace.json`:
+Aby zarejestrować wtyczkę w tym katalogu, dodaj wpis do tablicy `plugins` w `.claude-plugin/marketplace.json`:
 
 ```json
 {
@@ -51,4 +48,10 @@ Aby dodać wtyczkę do tego marketplace, dodaj wpis do tablicy `plugins` w `.cla
   },
   "license": "MIT"
 }
+```
+
+Walidacja poprawności manifestu:
+
+```bash
+claude plugin validate .
 ```
