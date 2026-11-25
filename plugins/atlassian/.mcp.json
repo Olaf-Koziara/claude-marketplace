@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "env": {
+        "JIRA_URL": "${user_config.jira_url}",
+        "JIRA_USERNAME": "${user_config.jira_username}",
+        "JIRA_API_TOKEN": "${user_config.jira_api_token}",
+        "JIRA_PERSONAL_TOKEN": "${user_config.jira_personal_token}",
+        "CONFLUENCE_URL": "${user_config.confluence_url}",
+        "CONFLUENCE_USERNAME": "${user_config.confluence_username}",
+        "CONFLUENCE_API_TOKEN": "${user_config.confluence_api_token}",
+        "CONFLUENCE_PERSONAL_TOKEN": "${user_config.confluence_personal_token}",
+        "READ_ONLY_MODE": "${user_config.read_only_mode}"
+      }
+    }
+  }
+}
