@@ -11,6 +11,12 @@
   "repository": "https://github.com/sooperset/mcp-atlassian",
   "license": "MIT",
   "keywords": ["jira", "confluence", "atlassian", "mcp", "issues", "wiki"],
+  "network": {
+    "hosts": [
+      "*.atlassian.net",
+      "*.atlassian.com"
+    ]
+  },
   "userConfig": {
     "jira_url": {
       "type": "string",

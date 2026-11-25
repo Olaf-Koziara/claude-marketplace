@@ -7,39 +7,23 @@ Katalog wtyczek dla Claude Code oraz OMP.
 ```
 .
 ├── .claude-plugin/
-<<<<<<< HEAD
-│   └── marketplace.json    # Główny rejestr katalogu
-├── plugins/
-│   └── atlassian/          # Wtyczka: Jira i Confluence (MCP)
-│       ├── .claude-plugin/
-│       │   └── plugin.json
-│       └── skills/
-│           └── atlassian-usage/
-│               └── SKILL.md
-├── marketplace.json        # Korzeń dla wstecznej kompatybilności
-||||||| dc4231e
-│   └── marketplace.json    # Główny rejestr katalogu
-├── plugins/                # Katalog na przyszłe wtyczki (lub referencje)
-├── marketplace.json        # Korzeń dla wstecznej kompatybilności
-=======
 │   └── marketplace.json    # Manifest katalogu marketplace
 ├── plugins/                # Katalog na lokalne wtyczki (lub referencje)
 │   └── atlassian/          # Wtyczka: Jira i Confluence (MCP)
 │       ├── .claude-plugin/
+│       │   ├── icon.png
 │       │   └── plugin.json
 │       ├── .mcp.json
+│       ├── README.md
 │       └── skills/
 │           └── atlassian-usage/
 │               └── SKILL.md
->>>>>>> 5d6448a0027297f7e2454709ecdf24d1318f63b2
 └── README.md
 ```
 
 ## Rejestracja marketplace
 
-Nazwa marketplace w katalogu to `koziara-plugins`.
-
-Nazwa marketplace w katalogu to `olaf-marketplace`.
+Identyfikator marketplace w katalogu to `olaf-marketplace`.
 
 ### Claude Code
 
@@ -56,13 +40,7 @@ omp plugin marketplace add Olaf-Koziara/claude-marketplace
 Aktualizacja listy wtyczek:
 
 ```bash
-<<<<<<< HEAD
-omp plugin marketplace update koziara-plugins
-||||||| dc4231e
-omp plugin marketplace update claude-marketplace
-=======
 omp plugin marketplace update olaf-marketplace
->>>>>>> 5d6448a0027297f7e2454709ecdf24d1318f63b2
 ```
 
 ## Wtyczki
@@ -110,15 +88,7 @@ ręczny wpis (`claude mcp remove mcp-atlassian`).
 
 ## Dodawanie wtyczek
 
-<<<<<<< HEAD
-Aby dodać wtyczkę do tego marketplace, dodaj wpis do tablicy `plugins` w
-`.claude-plugin/marketplace.json` oraz w `marketplace.json` (oba pliki są
-identyczne):
-||||||| dc4231e
-Aby dodać wtyczkę do tego marketplace, dodaj wpis do tablicy `plugins` w `.claude-plugin/marketplace.json`:
-=======
 Aby zarejestrować wtyczkę w tym katalogu, dodaj wpis do tablicy `plugins` w `.claude-plugin/marketplace.json`:
->>>>>>> 5d6448a0027297f7e2454709ecdf24d1318f63b2
 
 ```json
 {
@@ -134,17 +104,8 @@ Aby zarejestrować wtyczkę w tym katalogu, dodaj wpis do tablicy `plugins` w `.
 }
 ```
 
-<<<<<<< HEAD
-Walidacja:
-
-```bash
-claude plugin validate --strict .
-```
-||||||| dc4231e
-=======
 Walidacja poprawności manifestu:
 
 ```bash
 claude plugin validate .
 ```
->>>>>>> 5d6448a0027297f7e2454709ecdf24d1318f63b2
