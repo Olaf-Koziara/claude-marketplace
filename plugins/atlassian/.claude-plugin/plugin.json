@@ -1,0 +1,66 @@
+{
+  "name": "atlassian",
+  "displayName": "Atlassian (Jira & Confluence)",
+  "version": "0.1.0",
+  "description": "Jira and Confluence MCP tools: issues, sprints, boards, worklogs, pages, spaces, search, attachments.",
+  "author": {
+    "name": "Olaf Koziara",
+    "url": "https://github.com/Olaf-Koziara"
+  },
+  "homepage": "https://github.com/sooperset/mcp-atlassian",
+  "repository": "https://github.com/sooperset/mcp-atlassian",
+  "license": "MIT",
+  "keywords": ["jira", "confluence", "atlassian", "mcp", "issues", "wiki"],
+  "userConfig": {
+    "jira_url": {
+      "type": "string",
+      "title": "Jira URL",
+      "description": "Base URL of your Jira site, e.g. https://jira.example.com. Required for any Jira tool; pair it with jira_personal_token (Server / Data Center) or jira_username + jira_api_token (Cloud). Leave empty to disable Jira tools."
+    },
+    "jira_username": {
+      "type": "string",
+      "title": "Jira username / email",
+      "description": "Cloud basic auth only: email of your Atlassian account, paired with jira_api_token. Leave empty when using jira_personal_token."
+    },
+    "jira_api_token": {
+      "type": "string",
+      "title": "Jira API token",
+      "description": "Cloud basic auth only: Atlassian Cloud API token from id.atlassian.com > Security > API tokens, paired with jira_username. Leave empty when using jira_personal_token.",
+      "sensitive": true
+    },
+    "jira_personal_token": {
+      "type": "string",
+      "title": "Jira personal access token",
+      "description": "Personal access token (PAT) for Jira, the primary auth for Server / Data Center: create it under Profile > Personal Access Tokens. Atlassian Cloud has no PAT, so use jira_username + jira_api_token there. With a PAT, two Cloud-only tools (jira_batch_get_changelogs, jira_move_issue) are unavailable.",
+      "sensitive": true
+    },
+    "confluence_url": {
+      "type": "string",
+      "title": "Confluence URL",
+      "description": "Base URL of your Confluence site, e.g. https://confluence.example.com (Cloud: https://your-domain.atlassian.net/wiki). Required for any Confluence tool; pair it with confluence_personal_token (Server / Data Center) or confluence_username + confluence_api_token (Cloud). Leave empty to disable Confluence tools."
+    },
+    "confluence_username": {
+      "type": "string",
+      "title": "Confluence username / email",
+      "description": "Cloud basic auth only: email of your Atlassian account, paired with confluence_api_token. Leave empty when using confluence_personal_token."
+    },
+    "confluence_api_token": {
+      "type": "string",
+      "title": "Confluence API token",
+      "description": "Cloud basic auth only: Atlassian Cloud API token from id.atlassian.com > Security > API tokens, paired with confluence_username. Leave empty when using confluence_personal_token.",
+      "sensitive": true
+    },
+    "confluence_personal_token": {
+      "type": "string",
+      "title": "Confluence personal access token",
+      "description": "Personal access token (PAT) for Confluence, the primary auth for Server / Data Center: create it under Profile > Personal Access Tokens. Atlassian Cloud has no PAT, so use confluence_username + confluence_api_token there.",
+      "sensitive": true
+    },
+    "read_only_mode": {
+      "type": "boolean",
+      "title": "Read-only mode",
+      "description": "When on, hides and blocks every create/update/delete tool (issues, comments, pages, attachments).",
+      "default": false
+    }
+  }
+}
